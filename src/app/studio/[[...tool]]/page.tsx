@@ -1,19 +1,38 @@
-/**
- * This route is responsible for the built-in authoring environment using Sanity Studio.
- * All routes under your studio path is handled by this file using Next.js' catch-all routes:
- * https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes
- *
- * You can learn more about the next-sanity package here:
- * https://github.com/sanity-io/next-sanity
- */
+// src/app/blog/[slug]/page.tsx
 
-import { NextStudio } from 'next-sanity/studio'
-import config from '../../../../sanity.config'
+import { GetStaticPropsContext } from "next";
 
-export const dynamic = 'force-static'
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export { metadata, viewport } from 'next-sanity/studio'
+const BlogPage: React.FC<PageProps> = ({ params }) => {
+  const { slug } = params;
+  // Yahan par apna blog post ka data fetch karke render karein
+  return <div>{slug}</div>;
+};
 
-export default function StudioPage() {
-  return <NextStudio config={config} />
+export default BlogPage;
+
+// Agar aap data ko fetch kar rahe hain toh getStaticProps use karein:
+
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  const { slug } = params as { slug: string };
+  // Blog post ka data fetch karne ka logic yahan likhein
+
+  return {
+    props: {
+      params: { slug },
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  // Jo paths aap generate karna chahte hain unhe yahan return karein
+  return {
+    paths: [{ params: { slug: "example" } }],
+    fallback: false,
+  };
 }
