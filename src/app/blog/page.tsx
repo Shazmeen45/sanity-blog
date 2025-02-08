@@ -32,13 +32,14 @@ const Home = async () => {
           <u>"Express Yourself Freely Through Blogging"</u>
         </strong>
       </h1>
+
       <p className="mt-[20px] md:mt-[100px]">
-        In this space, I'll be exploring various aspects of personal development
-        and productivity, where we can engage with individuals and groups alike.
-        The blog will focus on sharing insightful content, including tips,
-        strategies, and the latest trends in self-improvement. My goal is to
-        foster a community where we can motivate each other, exchange ideas, and
-        grow together in our journey toward success.
+        In this space, I&apos;ll be exploring various aspects of personal
+        development and productivity, where we can engage with individuals and
+        groups alike. The blog will focus on sharing insightful content,
+        including tips, strategies, and the latest trends in self-improvement.
+        My goal is to foster a community where we can motivate each other,
+        exchange ideas, and grow together in our journey toward success.
       </p>
       <h3 className="text-xl text-center mt-10">
         <u>*--- Most Recent Posts ---*</u>
