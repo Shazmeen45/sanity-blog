@@ -29,7 +29,7 @@ const Home = async () => {
     <div>
       <h1 className="font-serif mx-auto mt-[70px] text-2xl text-center block md:hidden">
         <strong>
-          <u>"Express Yourself Freely Through Blogging"</u>
+          <u>"Unleash Your Voice Through Blogging"</u>
         </strong>
       </h1>
 

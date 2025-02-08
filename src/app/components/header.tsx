@@ -6,7 +6,7 @@ const Header = () => {
     <div className="fixed right-2 md:right-10 left-2 md:left-10 max-w-[1000px] mx-auto flex justify-center bg-secondary p-3 rounded-full">
       <h1 className="font-serif mx-auto text-2xl text-center hidden md:block">
         <strong>
-          <u>"Express Yourself Freely Through Blogging"</u>
+          <u>Unleash Your Voice Through Blogging</u>
         </strong>
       </h1>
       <ul className="flex justify-center items-center gap-5 mr-3">
