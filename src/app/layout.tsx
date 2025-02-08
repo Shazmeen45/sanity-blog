@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="max-w-[1500px] mx-auto p-5 border-[3px] border-primary shadow-primary shadow-inner rounded-sm ">
-          <Header/>
+          <Header />
           {children}
         </div>
       </body>
@@ -27,6 +27,6 @@ export default function RootLayout({
   );
 }
 
-
-
-{/* <div className="bg-[#141414] text-[#dbd9d9] max-w-[1500px] mx-auto p-5 border-[2px] border-[#6EEB83] shadow-[#6EEB83] shadow-inner rounded-sm "> */}
+{
+  /* <div className="bg-[#141414] text-[#dbd9d9] max-w-[1500px] mx-auto p-5 border-[2px] border-[#6EEB83] shadow-[#6EEB83] shadow-inner rounded-sm "> */
+}
