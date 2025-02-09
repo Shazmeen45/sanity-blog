@@ -71,17 +71,17 @@ const Home = async () => {
 };
 
 // Generate Static Params for Dynamic Routing
-// export async function generateStaticParams() {
-//   const query = `
-//   *[_type == "post"] {
-//       "slug": slug.current
-//   }`;
-//   const blogs = await client.fetch(query);
+export async function generateStaticParams() {
+  const query = `
+   *[_type == "post"] {
+       "slug": slug.current
+   }`;
+  const blogs = await client.fetch(query);
 
-//   // Return params for each blog
-//   return blogs.map((blog: { slug: string }) => ({
-//     slug: blog.slug,
-//   }));
-// }
+  // Return params for each blog
+  return blogs.map((blog: { slug: string }) => ({
+    slug: blog.slug,
+  }));
+}
 
 export default Home;
